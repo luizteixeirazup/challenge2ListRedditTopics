@@ -24,10 +24,11 @@ public class AppChallengeTwo {
 				
 		for (int i = 1 ; i < responseSplit.length ; i++) {
 			titles[i-1] = responseSplit[i].substring(responseSplit[i].indexOf(">") + 1, responseSplit[i].indexOf("<"));
+			
 //			System.out.println(responseSplit[i].substring(responseSplit[i].indexOf(">") + 1, responseSplit[i].indexOf("<")));
 		}
 		
-		String[] sortedTitles = doInsertionSort(titles);
+		String[] sortedTitles = sortAlpha(titles);
 		
 		for (String st : sortedTitles) {
 			System.out.println(st);
@@ -35,7 +36,7 @@ public class AppChallengeTwo {
 		
 	}
 		
-	public static String[] doInsertionSort(String[] input) {
+	public static String[] sortAlpha(String[] input) {
 		
 		String temp;
 		
