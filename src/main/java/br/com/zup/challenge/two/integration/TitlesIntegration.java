@@ -1,4 +1,4 @@
-package br.com.zup.challenge.two.repository;
+package br.com.zup.challenge.two.integration;
 
 import java.io.IOException;
 import java.net.URI;
@@ -7,9 +7,9 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
-public class TitlesRepository {
+public class TitlesIntegration {
 	
-	public String[] listTitle() {
+	public String[] listTitles() {
 		
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://www.reddit.com/r/programming/")).build();

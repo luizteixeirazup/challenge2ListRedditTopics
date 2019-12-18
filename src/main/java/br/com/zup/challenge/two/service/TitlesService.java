@@ -1,14 +1,14 @@
 package br.com.zup.challenge.two.service;
 
-import br.com.zup.challenge.two.repository.TitlesRepository;
+import br.com.zup.challenge.two.integration.TitlesIntegration;
 
 public class TitlesService {
 	
-	TitlesRepository repository = new TitlesRepository();
+	TitlesIntegration integration = new TitlesIntegration();
 	
 	public String[] sortAlpha() {
 		
-		String[] input = repository.listTitle();
+		String[] input = integration.listTitles();
 		
 		String temp;
 		
